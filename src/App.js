@@ -13,7 +13,7 @@ function App() {
     <ExpenseItem></ExpenseItem>
     <p>Food Rs 10</p>
     <p>Petrol Rs 100</p>
-    <p>Movies Rs 200</p>
+    <p>fuel Rs 2000</p>
     </div>
    
   )
