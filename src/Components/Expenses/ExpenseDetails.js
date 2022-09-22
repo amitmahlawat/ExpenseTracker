@@ -1,6 +1,6 @@
 
 
-function ExpenseDetails(props) {
+const ExpenseDetails=(props)=> {
   return (
     <div>
         
