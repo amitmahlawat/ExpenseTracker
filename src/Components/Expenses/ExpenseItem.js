@@ -7,11 +7,16 @@ import React,{useState} from 'react';
 
 const ExpenseItem=(props) =>{
   const [Title,setTtile]=useState(props.Title );
+  const [Amount,setAmount]=useState(props.Amount );
   
 
   const clickHandler=()=>{
     setTtile('Updated!');
     console.log(Title);
+  }
+  const priceChange=()=>{
+    setAmount('100');
+    console.log(Amount);
   }
  
  
@@ -29,7 +34,7 @@ const ExpenseItem=(props) =>{
       
         <h2>{Title}</h2>
         </div>
-      <ExpenseDetails Amount={props.Amount}/>
+      <ExpenseDetails Amount={Amount}/>
       {/* {React.createElement(ExpenseDetails,{Amount:props.Amount})} */}
       
       
@@ -37,6 +42,7 @@ const ExpenseItem=(props) =>{
         {/* <div className="expense-item__price">${props.Amount}</div> */}
         {/* <div className="expense-item__description ">{props.Location}</div> */}
         <button onClick={clickHandler}>change title</button>
+        <button onClick={priceChange}>change price</button>
       </Card >
     
   );
