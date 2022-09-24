@@ -2,6 +2,7 @@
 import React from 'react';
 import './App.css';
 import Expenses from './Components/Expenses/Expenses';
+import NewExpense from './Components/NewExpense/NewExpense';
 
 function App() {
   const expenses = [
@@ -28,9 +29,13 @@ function App() {
       location:"Delhi"
     },
   ];
-  return ( React.createElement(Expenses,{item:expenses})  
-    // <div>
-    //   <Expenses item={expenses}></Expenses>
+  return ( 
+    <div>
+  <NewExpense/>
+    {/* React.createElement(Expenses,{itemexpenses})   */}
+    <Expenses item={expenses}></Expenses>
+    </div>
+    
 
     
 
