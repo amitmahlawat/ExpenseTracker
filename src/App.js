@@ -1,4 +1,4 @@
-
+import { useState } from 'react';
 import React from 'react';
 import './App.css';
 import Expenses from './Components/Expenses/Expenses';
@@ -28,12 +28,24 @@ function App() {
       date: new Date(2021, 5, 12),
       location:"Delhi"
     },
+    
   ];
+
+  const [items,setItems]=useState(expenses);
+
+  const addExpenseHandler=expense=>{
+    console.log('in app js')
+    console.log(expense)
+    setItems([...items,expense])
+  }
+
   return ( 
     <div>
-  <NewExpense/>
+  <NewExpense onAddExpense={addExpenseHandler}/>
     {/* React.createElement(Expenses,{itemexpenses})   */}
-    <Expenses item={expenses}></Expenses>
+    <Expenses item={items}></Expenses>
+    
+    
     </div>
     
 
