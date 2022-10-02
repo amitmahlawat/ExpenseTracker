@@ -24,7 +24,7 @@ const ExpenseItem=(props) =>{
   return ( 
     
 
-
+<li>
     <Card className="expense-item">
         
         {/* {React.createElement(ExpenseDate,{Date:props.Date})} */}
@@ -42,7 +42,10 @@ const ExpenseItem=(props) =>{
         {/* <div className="expense-item__price">${props.Amount}</div> */}
         {/* <div className="expense-item__description ">{props.Location}</div> */}
         {/* <button onClick={clickHandler}>change title</button> */}
+        
       </Card >
+      </li>
+      
     
   );
 }
